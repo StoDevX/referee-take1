@@ -1,9 +1,11 @@
 # cuddly-doodle
 
-> What is it? 
+> What is it?
+
 The first phase of world domination, of course!
 
 > No, really.
+
 You're no fun, are you? Fine. If you must know, it's part of a new feedback system for CS courses at St. Olaf.
 
 ## Outline
