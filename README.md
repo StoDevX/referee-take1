@@ -1,4 +1,4 @@
-# cuddly-doodle
+# Referee
 
 > What is it?
 
@@ -15,7 +15,7 @@ Un-goal: Remove human graders from the feedback loop.
 
 - Student submits homework: `git commit -m "submit hw13 complete"` and `git push origin master`
 - Stogit sees a new commit and notifies a webhook: `http://rns202-3.cs.stolaf.edu:15715/stogit.py`
-- `cuddly-doodle` now has control of the process!
+- `referee` now has control of the process!
   - It checks to see if the commit came from a stogit group that we care about
   - Then it loads the appropriate course definitions
   - It checks the commit message against something, to see if it needs to care about it: something like `(hw|lab).*complete$`
