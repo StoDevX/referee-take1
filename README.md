@@ -8,6 +8,19 @@ The first phase of world domination, of course!
 
 You're no fun, are you? Fine. If you must know, it's part of a new feedback system for CS courses at St. Olaf.
 
+## Contributing
+
+We've got a Python virtual environment set up for this, so that you don't need to muck with your global python installation:
+
+    source bin/activate       # bash
+    source bin/activate.csh   # csh
+    source bin/activate.fish  # fish
+
+After you're in the venv, make sure to install the requirements we have:
+
+    pip install -r requirements.txt
+
+
 ## Outline
 
 Goal: Provide more immediate feedback to students about their homework submissions.
