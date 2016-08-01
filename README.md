@@ -18,7 +18,7 @@ We've got a Python virtual environment set up for this, so that you don't need t
 
 After you're in the venv, make sure to install the requirements we have:
 
-    pip install -r requirements.txt
+    make init
 
 
 ## Outline
