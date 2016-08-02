@@ -46,6 +46,7 @@ def get_messages_from_range(oldrev, newrev):
 def main():
     for line in sys.stdin:
         oldrev, newrev, ref = line.split()
+        print(oldrev, newrev, ref)
         print('commits =', get_messages_from_range(oldrev, newrev))
         print()
         for path, folders, files in walk(ref):
