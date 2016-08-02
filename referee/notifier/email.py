@@ -8,7 +8,7 @@ TO_ADDR = 'hawkrives@gmail.com'
 
 def send(msg):
     with smtplib.SMTP_SSL('smtp.gmail.com') as smtp:
-        smtp.login(username, password)
+        smtp.login('rives@stolaf.edu', 'mfoofoom')
         smtp.sendmail('rives@stolaf.edu', TO_ADDR, msg)
     print('mail sent')
 
