@@ -55,7 +55,6 @@ Valid options are `timeout`, `truncate_output`, `truncate_contents`, and `option
 `truncate_output`   | 10kb      | How much of the output should be shown?
 `truncate_contents` | false     | How much of the content should be shown?
 `optional`          | false     | Is the file optional?
-`alternate_names`   | []        | What other names might this file be under? Note that the system is case-sensetive, but will log a warning
 
 Examples:
 
