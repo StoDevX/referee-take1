@@ -59,8 +59,10 @@ Valid options are `timeout`, `truncate_output`, `truncate_contents`, and `option
 
 Examples:
 
-    files:
-        - [ file1.cpp, *cpp, optional: true ]
+```yaml
+files:
+    - [ file1.cpp, *cpp, optional: true ]
+```
 
 
 ## Tests
@@ -78,11 +80,12 @@ Commands for both `files` and `tests` are kind of special.
     - You can `|` pipe between command. stdin and stdout redirection are not supported; use `cat` to pipe to stdin, and `tee file` to put stdout in `file`.
     - File globs are supported, I think.
 
-
-    tests:
-      - - stddev.cpp
-        - cat firefox.txt | $@.exec
-        - cat avg-first-firefox.txt | $@.exec
+```yaml
+tests:
+  - - stddev.cpp
+    - cat firefox.txt | $@.exec
+    - cat avg-first-firefox.txt | $@.exec
+```
 
 This will run two tests for `stddev.cpp`: the first one pipes the contents of `firefox.txt` to `stddev.cpp.exec`, and the second test pipes `avg-first-firefox.txt` into `stddev.cpp.exec` (the same file).
 
