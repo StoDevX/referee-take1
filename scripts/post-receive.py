@@ -21,8 +21,8 @@ def git_show(*args):
     return git('show', *args)
 
 def git_log(*args):
-    print(args)
     return git('log', *args)
+
 
 def listdir(ref, path=''):
     path = path.strip('/')
@@ -37,14 +37,22 @@ def walk(ref, path=''):
         yield from walk(ref, os.path.join(path, d))
 
 
+def get_messages_from_range(oldrev, newrev):
+    """Messages are returned in reverse order, newest to oldest."""
+    messages = git_log('--oneline', '{}..{}'.format(oldrev, newrev)).strip().split('\n')
+    return [' '.join(msg.split(' ')[1:]) for msg in messages]
+
+
 def main():
     for line in sys.stdin:
         oldrev, newrev, ref = line.split()
-        print(git_log('--oneline', '{}..{}'.format(oldrev, newrev)))
+        print('commits =', get_messages_from_range(oldrev, newrev))
+        print()
         for path, folders, files in walk(ref):
             print('path =', path)
             print('folders =', folders)
             print('files =', files)
+        print()
 
 
 if __name__ == '__main__':
