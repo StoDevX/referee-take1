@@ -7,4 +7,4 @@ test:
 	@echo "Not implemented yet"
 
 run:
-	scripts/run.sh
+	scripts/run.py
