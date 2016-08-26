@@ -1,0 +1,7 @@
+version: '2'
+services:
+  student:
+    build: .
+    volumes:
+      - ..:/opt/student
+    command: python3
